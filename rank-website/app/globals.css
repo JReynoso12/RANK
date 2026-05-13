@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060f2c;
+  --foreground: #e8eefc;
+
+  --brand-navy: #0b1b3f;
+  --brand-navy-deep: #060f2c;
+  --brand-blue: #1e48c7;
+  --brand-blue-strong: #2a5cf2;
+  --brand-blue-soft: #3b6bff;
+  --brand-blue-tint: #e8efff;
+  --brand-ink: #0a1733;
+  --brand-muted: #6b7a99;
+  --brand-line: rgba(255, 255, 255, 0.08);
+  --surface: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-deep: var(--brand-navy-deep);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-blue-strong: var(--brand-blue-strong);
+  --color-brand-blue-soft: var(--brand-blue-soft);
+  --color-brand-blue-tint: var(--brand-blue-tint);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-muted: var(--brand-muted);
+  --color-brand-line: var(--brand-line);
+  --color-surface: var(--surface);
+
+  --font-sans: var(--font-inter);
+  --font-brand: var(--font-bebas);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Offset for sticky header so anchor links don't hide content under the bar */
+  scroll-padding-top: 5rem;
+  /* Prevent iOS Safari text-size auto-inflation in landscape */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Avoid horizontal scroll from any edge artifacts on mobile */
+  overflow-x: hidden;
+}
+
+body {
+  /* Respect iOS safe-area insets (notched devices) */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Remove iOS double-tap blue flash; we use explicit hover/active states instead */
+a,
+button,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Make images/media fluid by default */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: var(--brand-blue);
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
