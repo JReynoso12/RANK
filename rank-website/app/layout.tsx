@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${inter.variable} ${bebasNeue.variable} antialiased`}
     >
       <body className="min-h-dvh bg-brand-navy-deep text-foreground flex flex-col overflow-x-hidden">

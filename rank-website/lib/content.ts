@@ -8,7 +8,10 @@ export const site = {
     { label: "Projects", href: "#projects" },
     { label: "About", href: "#about" },
   ],
-  contactHref: "#contact",
+  contactHref: "/booking",
+  bookingHref: "/booking",
+  bookingEmail: "rankengineeringservices@gmail.com",
+  bookingPhone: "0948 903 3667",
 } as const;
 
 export const hero = {

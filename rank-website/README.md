@@ -20,6 +20,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
+## Booking emails (Resend)
+
+The `/booking` page submits to `app/api/booking/route.ts`, which sends email using Resend.
+
+1. Copy `.env.example` to `.env.local`
+2. Fill in:
+   - `RESEND_API_KEY`
+   - `BOOKING_FROM_EMAIL` (must be a verified sender in Resend, or use `onboarding@resend.dev` for testing)
+   - `BOOKING_TO_EMAIL` (your receiving inbox)
+
 ## Available scripts
 
 - `npm run dev` — start the local dev server with Turbopack

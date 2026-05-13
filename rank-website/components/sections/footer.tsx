@@ -5,6 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { motion } from "motion/react";
 import { Logo } from "@/components/ui/logo";
 import { AnimateIn, Stagger, StaggerItem } from "@/components/animate/animate-in";
+import { Button } from "@/components/ui/button";
 import { site } from "@/lib/content";
 
 const year = new Date().getFullYear();
@@ -72,6 +73,13 @@ export function Footer() {
                 RANK Engineering Services
               </li>
             </ul>
+            <Button
+              href={site.bookingHref}
+              size="sm"
+              className="mt-5 rounded-md w-full sm:w-auto"
+            >
+              Book a Consultation
+            </Button>
           </StaggerItem>
         </Stagger>
 

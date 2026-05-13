@@ -75,7 +75,7 @@ export function SiteHeader() {
 
           <div className="hidden md:block shrink-0">
             <Button href={site.contactHref} size="sm" className="rounded-md">
-              Contact
+              Book Now
             </Button>
           </div>
 
@@ -118,7 +118,7 @@ export function SiteHeader() {
               className="mt-2 w-full rounded-md"
               onClick={() => setOpen(false)}
             >
-              Contact
+              Book Now
             </Button>
           </nav>
         </div>
